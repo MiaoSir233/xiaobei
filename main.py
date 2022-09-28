@@ -2,10 +2,11 @@ import base64
 import json
 import os
 import random
-import requests
-import time
 import smtplib
+import time
 from email.mime.text import MIMEText
+
+import requests
 
 # 小北学生 账号密码
 USERNAME = os.getenv("XB_USERNAME")
@@ -231,7 +232,7 @@ def wxapp_notify(content, title='小北成功打卡通知'):
 def send_email(content):
     msg_from = EMAILFROM  # 发送方邮箱
     passwd = EMAILKEY  # 填入发送方邮箱的授权码
-    msg_to = EMAILTO  # 收件人邮箱
+    msg_to = EMAILFROM  # 收件人邮箱
 
     subject = "小北打卡状态"  # 主题
     msg = MIMEText(content)
