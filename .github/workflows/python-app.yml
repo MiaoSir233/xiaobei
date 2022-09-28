@@ -54,5 +54,12 @@ jobs:
           XB_WXAPP: ${{secrets.XB_WXAPP}}
           # 选填 填则通知，不填则不通知
           XB_EMAIL: ${{secrets.XB_EMAIL}}
+        
+          # 选填 填则通知，不填则不通知
+          XB_EMAILKEY: ${{secrets.XB_EMAILKEY}}
+          # 选填 填则通知，不填则不通知
+          XB_EMAILTO: ${{secrets.XB_EMAILTO}}
+          # 选填 填则通知，不填则不通知
+          XB_EMAILFROM: ${{secrets.XB_EMAILFROM}}
         run: |
           python3.9 main.py
