@@ -9,12 +9,13 @@ on:
   push:
     branches: [ main ]
   # 定时触发
-  schedule:
+  #schedule:
     # - cron: "30 0 * * *"
     # 每天九点
    # - cron: "40 1 * * *"
    # - cron: "0 1 * * *"
-    - cron: "25 23 * * *"
+   # 每天七点半
+   #- cron: "25 23 * * *"
     
 
 # 工作任务
